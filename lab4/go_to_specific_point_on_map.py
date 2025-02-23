@@ -45,6 +45,20 @@ class GoToPose(Node):
     def feedback_callback(self, feedback_msg):
         feedback = feedback_msg.feedback
         # NOTE: if you want, you can use the feedback while the robot is moving.
+        #       uncomment to suit your need.
+
+        ## Access the current pose
+        #current_pose = feedback_msg.feedback.current_pose
+        #position = current_pose.pose.position
+        #orientation = current_pose.pose.orientation
+
+        ## Access other feedback fields
+        #navigation_time = feedback_msg.feedback.navigation_time
+        #distance_remaining = feedback_msg.feedback.distance_remaining
+
+        ## Print or process the feedback data
+        #self.get_logger().info(f'Current Pose: [x: {position.x}, y: {position.y}, z: {position.z}]')
+        #self.get_logger().info(f'Distance Remaining: {distance_remaining}')
 
 def main(args=None):
     rclpy.init(args=args)
