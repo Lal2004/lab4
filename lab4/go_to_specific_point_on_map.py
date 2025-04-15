@@ -64,7 +64,7 @@ def main(args=None):
     rclpy.init(args=args)
 
     go_to_pose = GoToPose()
-    go_to_pose.send_goal(5.55, 1.0, 0.0)  # example coordinates
+    go_to_pose.send_goal(-3.5, -4.9, 0.0)  # example coordinates
     rclpy.spin(go_to_pose)
 
 if __name__ == '__main__':
